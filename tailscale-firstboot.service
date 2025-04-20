@@ -1,0 +1,13 @@
+[Unit]
+Description=Tailscale First‑Boot Authentication
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/tailscale up --ssh
+StandardInput=tty
+StandardOutput=journal+console
+
+[Install]
+WantedBy=multi-user.target
