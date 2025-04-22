@@ -5,7 +5,7 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/local/bin/tailscale up --ssh
+ExecStart=/usr/bin/tailscale up --ssh
 StandardInput=tty
 StandardOutput=journal+console
 
